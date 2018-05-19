@@ -1,0 +1,2 @@
+#!/bin/sh
+exec gcc -MM -MG -DMIT_SCHEME "${1}"
