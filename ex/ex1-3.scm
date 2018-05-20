@@ -1,4 +1,6 @@
-;return two big od all three
+;return two big of all three
+;case : (sumlarge 5 2 6)
+;return: 11
 
 (define (sumlarge a b c)
   (cond
