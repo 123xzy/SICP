@@ -52,7 +52,7 @@ USA.
 #define HAVE_CTERMID 1
 
 /* Define to 1 if you have the <curses.h> header file. */
-#define HAVE_CURSES_H 1
+/* #undef HAVE_CURSES_H */
 
 /* Define if backslash-a works in C strings. */
 #define HAVE_C_BACKSLASH_A 1
@@ -174,7 +174,7 @@ USA.
 #define HAVE_FTRUNCATE 1
 
 /* Define to 1 if you have the <gdbm.h> header file. */
-#define HAVE_GDBM_H 1
+/* #undef HAVE_GDBM_H */
 
 /* Define to 1 if you have the `getcwd' function. */
 #define HAVE_GETCWD 1
@@ -225,7 +225,7 @@ USA.
 #define HAVE_KILL 1
 
 /* Define to 1 if you have the `crypto' library (-lcrypto). */
-#define HAVE_LIBCRYPTO 1
+/* #undef HAVE_LIBCRYPTO */
 
 /* Define to 1 if you have the `db-4' library (-ldb-4). */
 /* #undef HAVE_LIBDB_4 */
@@ -234,7 +234,7 @@ USA.
 #define HAVE_LIBDL 1
 
 /* Define to 1 if you have the `gdbm' library (-lgdbm). */
-#define HAVE_LIBGDBM 1
+/* #undef HAVE_LIBGDBM */
 
 /* Define to 1 if you have the `m' library (-lm). */
 #define HAVE_LIBM 1
@@ -297,7 +297,7 @@ USA.
 #define HAVE_MODF 1
 
 /* Define to 1 if you have the <ncurses.h> header file. */
-#define HAVE_NCURSES_H 1
+/* #undef HAVE_NCURSES_H */
 
 /* Define to 1 if you have the <ndir.h> header file, and it defines `DIR'. */
 /* #undef HAVE_NDIR_H */
@@ -324,10 +324,10 @@ USA.
 /* #undef HAVE_OPENPTY */
 
 /* Define to 1 if you have the <openssl/blowfish.h> header file. */
-#define HAVE_OPENSSL_BLOWFISH_H 1
+/* #undef HAVE_OPENSSL_BLOWFISH_H */
 
 /* Define to 1 if you have the <openssl/md5.h> header file. */
-#define HAVE_OPENSSL_MD5_H 1
+/* #undef HAVE_OPENSSL_MD5_H */
 
 /* Define to 1 if you have the `poll' function. */
 #define HAVE_POLL 1
@@ -512,7 +512,7 @@ USA.
 #define HAVE_SYS_WAIT_H 1
 
 /* Define to 1 if you have the <termcap.h> header file. */
-#define HAVE_TERMCAP_H 1
+/* #undef HAVE_TERMCAP_H */
 
 /* Define to 1 if you have the <termios.h> header file. */
 #define HAVE_TERMIOS_H 1
@@ -521,7 +521,7 @@ USA.
 #define HAVE_TERMIO_H 1
 
 /* Define to 1 if you have the <term.h> header file. */
-#define HAVE_TERM_H 1
+/* #undef HAVE_TERM_H */
 
 /* Define to 1 if you have the `times' function. */
 #define HAVE_TIMES 1

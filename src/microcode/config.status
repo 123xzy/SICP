@@ -437,7 +437,7 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/xzy/SICP/mit-scheme-9.2/src/microcode'
+ac_pwd='/home/xzy/SICP/src/microcode'
 srcdir='.'
 INSTALL='/usr/bin/install -c --preserve-timestamps'
 test -n "$AWK" || AWK=awk
@@ -630,7 +630,7 @@ fi
 
 echo 'BEGIN {' >"$ac_tmp/subs1.awk" &&
 cat >>"$ac_tmp/subs1.awk" <<\_ACAWK &&
-F["MODULE_RULES"]="config-rules.module"
+F["MODULE_RULES"]="/dev/null"
 F["LIARC_VARS"]="/dev/null"
 F["LIARC_RULES"]="/dev/null"
 _ACAWK
@@ -645,13 +645,13 @@ S["AUX_PROGRAMS"]=""
 S["MODULE_LOADER"]=""
 S["MODULE_LDFLAGS"]=" -shared -fPIC"
 S["MODULE_CFLAGS"]="-fPIC "
-S["MODULE_TARGETS"]=" prbfish.so prmd5.so prgdbm.so prx11.so"
+S["MODULE_TARGETS"]=""
 S["SCHEME_LDFLAGS"]=" -export-dynamic"
 S["SCHEME_DEFS"]="-DMIT_SCHEME"
-S["PRMD5_LIBS"]="-lcrypto"
-S["PRBFISH_LIBS"]="-lcrypto"
-S["OPTIONAL_OBJECTS"]=" cmpauxmd.o terminfo.o tterm.o pruxdld.o pruxffi.o cmpint.o cmpintmd.o comutl.o"
-S["OPTIONAL_SOURCES"]=" cmpauxmd.m4 terminfo.c tterm.c pruxdld.c pruxffi.c cmpint.c cmpintmd.c comutl.c"
+S["PRMD5_LIBS"]=""
+S["PRBFISH_LIBS"]=""
+S["OPTIONAL_OBJECTS"]=" cmpauxmd.o termcap.o tparam.o tterm.o pruxdld.o pruxffi.o cmpint.o cmpintmd.o comutl.o"
+S["OPTIONAL_SOURCES"]=" cmpauxmd.m4 termcap.c tparam.c tterm.c pruxdld.c pruxffi.c cmpint.c cmpintmd.c comutl.c"
 S["M4_FLAGS"]=" -P __linux__,1 -P SUPPRESS_LEADING_UNDERSCORE,1 -P __ELF__,1"
 S["GC_HEAD_FILES"]="gccode.h cmpgc.h cmpintmd-config.h cmpintmd.h"
 S["AS_FLAGS"]=""
@@ -687,7 +687,7 @@ S["SET_MAKE"]=""
 S["target_alias"]=""
 S["host_alias"]=""
 S["build_alias"]=""
-S["LIBS"]="-ldl -lncurses -lm "
+S["LIBS"]="-ldl -lm "
 S["ECHO_T"]=""
 S["ECHO_N"]="-n"
 S["ECHO_C"]=""
@@ -955,16 +955,6 @@ D["HAVE_WAITPID"]=" 1"
 D["VOID_SIGNAL_HANDLERS"]=" 1"
 D["HAVE_LONG_FILE_NAMES"]=" 1"
 D["USE_TERMCAP"]=" 1"
-D["HAVE_NCURSES_H"]=" 1"
-D["HAVE_CURSES_H"]=" 1"
-D["HAVE_TERM_H"]=" 1"
-D["HAVE_TERMCAP_H"]=" 1"
-D["HAVE_OPENSSL_BLOWFISH_H"]=" 1"
-D["HAVE_LIBCRYPTO"]=" 1"
-D["HAVE_OPENSSL_MD5_H"]=" 1"
-D["HAVE_LIBCRYPTO"]=" 1"
-D["HAVE_GDBM_H"]=" 1"
-D["HAVE_LIBGDBM"]=" 1"
 D["HAVE_LIBDL"]=" 1"
 D["UX_DLD_ENABLED"]=" 1"
   for (key in D) D_is_set[key] = 1

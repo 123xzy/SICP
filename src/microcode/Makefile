@@ -80,7 +80,7 @@ DEFS = -DHAVE_CONFIG_H -DMIT_SCHEME -DDEFAULT_LIBRARY_PATH=\"$(AUXDIR)\"
 CFLAGS = -Wold-style-definition -Wextra -Wno-sign-compare -Wno-unused-parameter -Wstrict-prototypes -Wnested-externs -Wredundant-decls -Wall -Wundef -Wpointer-arith -Winline -O3 
 CPPFLAGS =  -I. -I$(srcdir)
 LDFLAGS = 
-LIBS = -ldl -lncurses -lm 
+LIBS = -ldl -lm 
 M4_FLAGS =  -P __linux__,1 -P SUPPRESS_LEADING_UNDERSCORE,1 -P __ELF__,1
 AS_FLAGS = 
 
@@ -121,12 +121,12 @@ STD_OBJECTS = artutl.o avltree.o bkpt.o bignum.o bigprm.o bitstr.o boot.o \
 	$(OPTIONAL_OBJECTS)
 
 GC_HEAD_FILES = gccode.h cmpgc.h cmpintmd-config.h cmpintmd.h
-OPTIONAL_SOURCES =  cmpauxmd.m4 terminfo.c tterm.c pruxdld.c pruxffi.c cmpint.c cmpintmd.c comutl.c
-OPTIONAL_OBJECTS =  cmpauxmd.o terminfo.o tterm.o pruxdld.o pruxffi.o cmpint.o cmpintmd.o comutl.o
-PRBFISH_LIBS = -lcrypto
-PRMD5_LIBS = -lcrypto
+OPTIONAL_SOURCES =  cmpauxmd.m4 termcap.c tparam.c tterm.c pruxdld.c pruxffi.c cmpint.c cmpintmd.c comutl.c
+OPTIONAL_OBJECTS =  cmpauxmd.o termcap.o tparam.o tterm.o pruxdld.o pruxffi.o cmpint.o cmpintmd.o comutl.o
+PRBFISH_LIBS = 
+PRMD5_LIBS = 
 
-MODULE_TARGETS =  prbfish.so prmd5.so prgdbm.so prx11.so
+MODULE_TARGETS = 
 MODULE_CFLAGS = -fPIC 
 MODULE_LDFLAGS =  -shared -fPIC
 MODULE_LOADER = 
@@ -238,30 +238,6 @@ prx11.so: prx11.o x11base.o x11color.o x11graph.o x11term.o
 	$(LINK_MODULE) prx11.o x11base.o x11color.o x11graph.o x11term.o \
 	  -lX11 $(MODULE_LIBS)
 
-
-x11base.o: x11base.c
-	 $(COMPILE_MODULE) -c $*.c
-
-x11color.o: x11color.c
-	 $(COMPILE_MODULE) -c $*.c
-
-x11graph.o: x11graph.c
-	 $(COMPILE_MODULE) -c $*.c
-
-x11term.o: x11term.c
-	 $(COMPILE_MODULE) -c $*.c
-
-prbfish.o: prbfish.c
-	 $(COMPILE_MODULE) -c $*.c
-
-prmd5.o: prmd5.c
-	 $(COMPILE_MODULE) -c $*.c
-
-prgdbm.o: prgdbm.c
-	 $(COMPILE_MODULE) -c $*.c
-
-prx11.o: prx11.c
-	 $(COMPILE_MODULE) -c $*.c
 
 tags: TAGS
 TAGS:
